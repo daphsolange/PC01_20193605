@@ -10,6 +10,7 @@
 </head>
 <body>
     <h1>Registro</h1>
+    <div class="card">
     <div id="columnas" class="mt-2">
         <div class="row">
             <div class="col-md-6">
@@ -18,11 +19,11 @@
                         <label class="form-label">Nombre</label>
                         <input type="text" class="form-control"/>
                     </div>
-                    <div>
+                    <div class="mt-2">
                         <label class="form-label">Apellido</label>
                         <input type="text" class="form-control"/>
                     </div>
-                    <div>
+                    <div class="mt-2">
                         <label class="form-label">Sexo</label>
                         <form>
                             <input type="radio" name="genero" /><a>Masculino</a>
@@ -30,23 +31,33 @@
                             <input type="radio" name="genero" /><a>No precisa</a>
                         </form>
                     </div>
-                    <div>
+                    <div class="mt-2">
                         <label class="form-label">País</label>
-                            <select>
-                                <option>Perú</option>
-                                <option>Brasil</option>
-                                <option>Colombia</option>
-                                <option>Chile</option>
+                        <div class="form-floating">
+                            <select class="form-select" id="floatingSelect">
+                              <option selected>Perú</option>
+                              <option value="1">Perú</option>
+                              <option value="2">Chile</option>
+                              <option value="3">Colombia</option>
                             </select>
+                          </div>
+                    </div>
+                    <div class="mt-2">
+                        <label class="form-label">Username</label>
+                        <input type="text" class="form-control"/>
+                    </div>
+                    <div class="mt-2">
+                        <label class="form-label">Password</label>
+                        <input type="text" class="form-control"/>
                     </div>
                 </div>    
             </div>
             <div class="col-md-6">
                 <div class="card-body">
-                    <h2>Aficiones</h2>
+                    <h4>Aficiones</h4>
                     <div>
                         <ul class="list-group">
-                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <li class="list-group-item active d-flex justify-content-between align-items-center">
                                 Fútbol
                             </li><li class="list-group-item d-flex justify-content-between align-items-center">
                                 Leer
@@ -66,30 +77,20 @@
                         <label class="form-label">Otras:</label>
                         <input type="text" class="form-control"/>
                     </div>
-                    <div>
-                        <label class="form-label">Apellido</label>
-                        <input type="text" class="form-control"/>
-                    </div>
-                    <div>
-                        <label class="form-label">Sexo</label>
-                        <form>
-                            <input type="radio" name="genero" /><a>Masculino</a>
-                            <input type="radio" name="genero" /><a>Femenino</a>
-                            <input type="radio" name="genero" /><a>No precisa</a>
-                        </form>
-                    </div>
-                    <div>
-                        <label class="form-label">País</label>
-                            <select>
-                                <option>Perú</option>
-                                <option>Brasil</option>
-                                <option>Colombia</option>
-                                <option>Chile</option>
-                            </select>
+                    <div class="form-floating">
+                        <h4>Motivos de inscripción</h4>
+                        <p>Ingrese los motivos por los que desea suscribirse a este servicio:</p>
+                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
                     </div>
                 </div>    
             </div>
+            <div>
+                <div class="mt-2">
+                    <button type="button" class="btn btn-success btn-lg">Guardar</button>
+                    <a href="/index.html" class="btn btn-danger btn-lg" role="button" data-bs-toggle="button">Cancelar</a>                </div>
+            </div>
         </div>
+    </div>
     </div>
 </body>
 </html>
